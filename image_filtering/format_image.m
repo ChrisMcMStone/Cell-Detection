@@ -6,9 +6,9 @@ function image = format_image(base_dir, file)
 
 img = imread([base_dir, file]);
 
-img = im2double(img);
+img = rgb2gray(img);
 
-image = rgb2gray(img);
+image = double(img);
 
 end
 
