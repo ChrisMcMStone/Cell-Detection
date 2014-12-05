@@ -31,6 +31,6 @@ end
 specificity = trueNegatives/(trueNegatives + falsePositives);
 sensitivity = truePositives/(truePositives + falseNegatives);
 
-m = [sensitivity,specificity];
+m = [sensitivity specificity];
 end
 
