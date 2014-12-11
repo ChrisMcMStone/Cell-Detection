@@ -1,10 +1,10 @@
-function avg = averageROC( imageArray, groundTruthArray, noiseMask, edgeMaskX, edgeMaskY, thresholdArray )
+function avg = averageROCLap( imageArray, groundTruthArray, noiseMask, lapFilter )
 
 all = [];
 
 
 for i = 1:numel(imageArray)
-        newRow = threshold(imageArray{i}, noiseMask, edgeMaskX, edgeMaskY, groundTruthArray{i}, thresholdArray);
+        newRow = thresholdLap(imageArray{i}, noiseMask, lapFilter, groundTruthArray{i});
         all = [all, newRow];
 end
 
